@@ -14,5 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $localIP = getHostByName(getHostName());
+    echo $localIP;
+    // return view('welcome');
 });
