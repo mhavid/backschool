@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('code');
             $table->integer('id_wali');
+            $table->integer('id_school');
             $table->timestamp('deleted_at')->nullable();
             $table->timestamps();
         });

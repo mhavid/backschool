@@ -4,12 +4,19 @@ namespace App\Http\Controllers\api;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Transformers\Json;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function index(){
+    public function __construct()
+    {
+        $this->middleware('token');
+    }
+
+    public function index()
+    {
         $users = User::get();
-        dd($users);
+        return Json::response($users);
     }
 }
