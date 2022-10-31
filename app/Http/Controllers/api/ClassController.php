@@ -22,7 +22,7 @@ class ClassController extends Controller
             $ret = [
                 'students' => $user,
                 'wali_kelas' => [],
-                'teachers' => []
+                'courses' => []
             ];
             return Json::response($ret);
         } catch (\Throwable $th) {
@@ -31,7 +31,7 @@ class ClassController extends Controller
         }
     }
 
-    public function classes(Request $request)
+    public function list(Request $request)
     {
         try {
             $class = Kelas::where('id_school', decrypt($request->id_school))
