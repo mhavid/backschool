@@ -46,4 +46,9 @@ class ClassController extends Controller
             return Json::response([], 'Error Server', 500);
         }
     }
+
+    private function getCourse()
+    {
+        
+    }
 }
