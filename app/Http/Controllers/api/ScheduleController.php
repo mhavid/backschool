@@ -16,7 +16,45 @@ class ScheduleController extends Controller
      */
     public function index()
     {
-        //
+        $class = [
+            [
+                'name' => 'X',
+                'jam' => [
+                    [
+                        'status' => 0,
+                        'jam' => '07.00'
+                    ],[
+                        'status' => 0,
+                        'jam' => '08.00'
+                    ],[
+                        'status' => 1,
+                        'jam' => '09.00'
+                    ],[
+                        'status' => 0,
+                        'jam' => '10.00'
+                    ]
+                ]
+            ],[
+                'name' => 'X1',
+                'jam' => [
+                    [
+                        'status' => 0,
+                        'jam' => '07.00'
+                    ],[
+                        'status' => 0,
+                        'jam' => '08.00'
+                    ],[
+                        'status' => 1,
+                        'jam' => '09.00'
+                    ],[
+                        'status' => 0,
+                        'jam' => '10.00'
+                    ]
+                ]
+            ]
+        ];
+
+        dd($class);
     }
 
     /**
